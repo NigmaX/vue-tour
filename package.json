@@ -1,11 +1,11 @@
 {
   "name": "cloudents-tour",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Vue Tour is a lightweight, simple and customizable tour plugin for use with Vue.js. It provides a quick and easy way to guide your users through your application.",
   "author": "Pulsar <pulsar.dev.team@gmail.com>",
   "license": "MIT",
-  "main": "dist/vue-tour.common.js",
-  "module": "dist/vue-tour.umd.js",
+  "main": "dist/cloudents-tour.common.js",
+  "module": "dist/cloudents-tour.umd.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/NigmaX/vue-tour.git"
