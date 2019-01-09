@@ -204,7 +204,6 @@ export default {
   .v-step__header {
     margin: -1rem -1rem 0.5rem;
     padding: 0.5rem;
-    background-color: #454d5d;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
   }
