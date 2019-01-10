@@ -124,6 +124,10 @@ export default {
       this.customCallbacks.onStop()
       this.currentStep = -1
     },
+    close(){
+      //closes the tour but not firing the close event
+      this.currentStep = -1
+    },
 
     handleKeyup (e) {
       // TODO: debug mode
