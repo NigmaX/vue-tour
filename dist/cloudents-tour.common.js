@@ -2915,12 +2915,12 @@ var setPublicPath = __webpack_require__("1eb2");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
 var es6_function_name = __webpack_require__("7f7f");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"0595ba96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VTour.vue?vue&type=template&id=50006eb3&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"0595ba96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VTour.vue?vue&type=template&id=32a2925c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-tour"},[_vm._t("default",_vm._l((_vm.steps),function(step,index){return (_vm.currentStep === index)?_c('v-step',{key:index,attrs:{"step":step,"previous-step":_vm.previousStep,"next-step":_vm.nextStep,"stop":_vm.stop,"is-first":_vm.isFirst,"is-last":_vm.isLast,"labels":_vm.customOptions.labels}}):_vm._e()}),{currentStep:_vm.currentStep,steps:_vm.steps,previousStep:_vm.previousStep,nextStep:_vm.nextStep,stop:_vm.stop,isFirst:_vm.isFirst,isLast:_vm.isLast,labels:_vm.customOptions.labels})],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VTour.vue?vue&type=template&id=50006eb3&
+// CONCATENATED MODULE: ./src/components/VTour.vue?vue&type=template&id=32a2925c&
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/builtin/es6/defineProperty.js
 function _defineProperty(obj, key, value) {
@@ -3026,7 +3026,7 @@ var KEYS = {
 //
 
 /* harmony default export */ var VTourvue_type_script_lang_js_ = ({
-  name: 'v-tour',
+  name: "v-tour",
   props: {
     steps: {
       type: Array,
@@ -3059,13 +3059,13 @@ var KEYS = {
     this.$tours[this.name] = this;
 
     if (this.customOptions.useKeyboardNavigation) {
-      window.addEventListener('keyup', this.handleKeyup);
+      window.addEventListener("keyup", this.handleKeyup);
     }
   },
   beforeDestroy: function beforeDestroy() {
     // Remove the keyup listener if it has been defined
     if (this.customOptions.useKeyboardNavigation) {
-      window.removeEventListener('keyup', this.handleKeyup);
+      window.removeEventListener("keyup", this.handleKeyup);
     }
   },
   computed: {
@@ -3099,7 +3099,7 @@ var KEYS = {
       setTimeout(function () {
         _this.customCallbacks.onStart();
 
-        _this.currentStep = typeof startStep !== 'undefined' ? parseInt(startStep, 10) : 0;
+        _this.currentStep = typeof startStep !== "undefined" ? parseInt(startStep, 10) : 0;
       }, this.customOptions.startTimeout);
     },
     previousStep: function previousStep() {
@@ -3116,6 +3116,10 @@ var KEYS = {
     },
     stop: function stop() {
       this.customCallbacks.onStop();
+      this.currentStep = -1;
+    },
+    close: function close() {
+      // closes the tour but not firing the close event
       this.currentStep = -1;
     },
     handleKeyup: function handleKeyup(e) {
